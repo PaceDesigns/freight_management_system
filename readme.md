@@ -1,4 +1,4 @@
-# ${1:Freight Management System}
+# Freight Management System
 
 ## Installation
 
