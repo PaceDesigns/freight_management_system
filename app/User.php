@@ -18,11 +18,18 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	protected $table = 'users';
 
 	/**
+	 * @param $password
+	 */
+	public function setPasswordAttribute($password){
+		$this->attributes['password'] = bcrypt($password);
+	}
+
+	/**
 	 * The attributes that are mass assignable.
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['name', 'email', 'password'];
+	protected $fillable = ['name', 'email', 'password', 'department', 'privilege', 'function', 'address', 'gender'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -30,5 +37,12 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 * @var array
 	 */
 	protected $hidden = ['password', 'remember_token'];
+
+	/**
+	 * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+	 */
+	public function department(){
+		return $this -> belongsTo('App\Department');
+	}
 
 }

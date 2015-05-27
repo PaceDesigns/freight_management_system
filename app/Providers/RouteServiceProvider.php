@@ -25,6 +25,8 @@ class RouteServiceProvider extends ServiceProvider {
 		//
 		
 		parent::boot($router);
+
+//		$router->bind('users', 'App\User');
 	}
 
 	/**

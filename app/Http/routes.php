@@ -11,13 +11,24 @@
 |
 */
 
-Route::get('/', function(){
-	return 'welcome';
-});
+	Route::get('/', function(){
+		return view('auth.login');
+	});
 
-Route::get('home', 'HomeController@index');
+	Route::get('/home', 'HomeController@index');
 
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+	Route::controllers([
+		'auth' => 'Auth\AuthController',
+		'password' => 'Auth\PasswordController',
+	]);
+
+	Route::resource('/admin/users', 'UsersController');
+
+	Route::resource('clients', 'ClientsController');
+
+	Route::resource('products', 'ProductsController');
+
+	Route::get('/mails', ['as'=>'mails', 'uses'=>'MailsController@index']);
+
+
+
