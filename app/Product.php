@@ -12,8 +12,16 @@ class Product extends Model {
 		'gross_weight',
 		'destination',
 		'destination_address',
-		'courier',
+		'courier_id',
 		'HAWB'
 	];
+
+	public function client(){
+		return $this->belongsTo('App\Client');
+	}
+
+	public function statuses(){
+		return $this->hasMany('App\Status');
+	}
 
 }

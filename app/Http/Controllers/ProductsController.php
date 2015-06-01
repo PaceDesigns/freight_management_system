@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Http\Requests\CreateProductRequest;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
@@ -13,15 +14,6 @@ class ProductsController extends Controller {
 		$this->middleware('auth');
 	}
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-		return view('');
-	}
 
 	/**
 	 * Show the form for creating a new resource.
@@ -30,7 +22,7 @@ class ProductsController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		return view('home.logistics.products.create');
 	}
 
 	/**
@@ -38,21 +30,14 @@ class ProductsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateProductRequest $request, Product $product)
 	{
-		//
+		$client = Client::first();
+		$request = $request->all();
+
+		return redirect('home.customers.show')->with();
 	}
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
 
 	/**
 	 * Show the form for editing the specified resource.
@@ -72,17 +57,6 @@ class ProductsController extends Controller {
 	 * @return Response
 	 */
 	public function update($id)
-	{
-		//
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
 	{
 		//
 	}

@@ -1,7 +1,7 @@
 <div class="row text-center col-xs-4 col-xs-offset-4">
 
     @if($errors->any())
-        <div class="panel panel-danger hide">
+        <div class="panel panel-danger">
             <header class="panel-heading">
                 <span style="font-style: italic !important; font-weight: lighter;">
                     <strong>Whoops!</strong>
@@ -16,6 +16,6 @@
 
             </div>
         </div>
-    @endif()
+    @endif
 
 </div>

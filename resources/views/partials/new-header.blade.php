@@ -7,7 +7,7 @@
   <meta name="author" content="ThemeBucket">
   <link rel="shortcut icon" href="#" type="image/png">
 
-  <title>Boxed Veiw</title>
+  <title>Freight Management System</title>
 
 <link href="{{ asset('css/all-styles.min.css') }}" rel="stylesheet">
 <script src="{{ asset('js/responsive-hack.min.js') }}"></script>

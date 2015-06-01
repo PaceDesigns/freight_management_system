@@ -15,7 +15,11 @@
 		return view('auth.login');
 	});
 
-	Route::get('/home', 'HomeController@index');
+	Route::get('/home', ['as'=>'home', 'uses'=>'HomeController@index']);
+	Route::get('/freights', ['as'=>'freights', 'uses'=>'HomeController@freights']);
+	Route::get('/freight', ['as'=>'freight', 'uses'=>'HomeController@freight']);
+
+
 
 	Route::controllers([
 		'auth' => 'Auth\AuthController',
@@ -26,9 +30,17 @@
 
 	Route::resource('clients', 'ClientsController');
 
-	Route::resource('products', 'ProductsController');
+	// Route::resource('products', 'ProductsController');
+
+	Route::get('/products/add', ['as'=>'add_product', 'uses'=>'ProductsController@create']);
+	Route::post('/products/add', ['as'=>'save_product', 'uses'=>'ProductsController@store']);
 
 	Route::get('/mails', ['as'=>'mails', 'uses'=>'MailsController@index']);
+
+
+	Route::get('/show', function(){
+		return view('home.customers.show');
+	});
 
 
 

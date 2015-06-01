@@ -9,170 +9,83 @@
 
 @section('content')
 		
-		<div class="wrapper">
-		    
-		    <div class="row">
-		        <div class="col-md-12">
-		            <h4 class="fw-title text-center">FREIGHT INFORMATION</h4>
-		            <div class="box-widget">
-		                <div class="widget-head clearfix">
-		                    <div id="top_tabby" class="block-tabby pull-left">
-		                    </div>
-		                </div>
-		                <div class="widget-container">
-		                    <div class="widget-block">
-		                        <div class="widget-content box-padding">
-		                            <form id="stepy_form" class=" form-horizontal left-align form-well">
-		                                <fieldset title="CUSTOMER INFORMATION">
-		                                    <legend></legend>
-		                                    <div class="form-group">
-		                                        <label class="col-md-2 col-sm-2 control-label">Full Name</label>
-		                                        <div class="col-md-6 col-sm-6">
-		                                            <input type="text" placeholder="Full Name" class="form-control" required>
-		                                        </div>
-		                                    </div>
-		                                    <div class="form-group">
-		                                        <label class="col-md-2 col-sm-2 control-label">Email Address</label>
-		                                        <div class="col-md-6 col-sm-6">
-		                                            <input required type="text" placeholder="Email Address" class="form-control">
-		                                        </div>
-		                                    </div>
-		                                    <div class="form-group">
-		                                        <label class="col-md-2 col-sm-2 control-label">Occupation</label>
-		                                        <div class="col-md-6 col-sm-6">
-		                                            <input required type="text" placeholder="Username" class="form-control">
-		                                        </div>
-		                                    </div>
-		                                    <div class="form-group">
-		                                        <label class="col-md-2 col-sm-2 control-label">Residential Address</label>
-		                                        <div class="col-md-6 col-sm-6">
-		                                            <input required type="text" placeholder="Username" class="form-control">
-		                                        </div>
-		                                    </div>
-		                                    <div class="form-group">
-		                                        <label class="col-md-2 col-sm-2 control-label">Valid National ID</label>
-		                                        <div class="col-md-6 col-sm-6">
-		                                            <input required type="text" placeholder="Username" class="form-control">
-		                                        </div>
-		                                    </div>
-		                                </fieldset>
-		                                <fieldset title="PRODUCT INFORMATION 1">
-		                                    <legend></legend>
-		                                    <div class="form-group">
-		                                        <label class="col-md-2 col-sm-2 control-label">Consignee</label>
-		                                        <div class="col-md-6 col-sm-6">
-		                                            <input type="text" placeholder="Phone" class="form-control">
-		                                        </div>
-		                                    </div>
-		                                    <div class="form-group">
-		                                        <label class="col-md-2 col-sm-2 control-label">HAWB #</label>
-		                                        <div class="col-md-6 col-sm-6">
-		                                            <input type="text" placeholder="Mobile" class="form-control">
-		                                        </div>
-		                                    </div>
-		                                    <div class="form-group">
-		                                        <label class="col-md-2 col-sm-2 control-label">Product Type</label>
-		                                        <div class="col-md-6 col-sm-6">
-		                                            <input type="text" placeholder="Mobile" class="form-control">
-		                                        </div>
-		                                    </div>
-		                                    <div class="form-group">
-		                                        <label class="col-md-2 col-sm-2 control-label">Product Description</label>
-		                                        <div class="col-md-6 col-sm-6">
-		                                            <input type="text" placeholder="Mobile" class="form-control">
-		                                        </div>
-		                                    </div>
-		                                    <div class="form-group">
-		                                        <label class="col-md-2 col-sm-2 control-label">Quantity</label>
-		                                        <div class="col-md-6 col-sm-6">
-		                                            <input type="text" placeholder="Mobile" class="form-control">
-		                                        </div>
-		                                    </div>
-		                                </fieldset>
-		                                <fieldset title="FREIGHT PROCESSING 2">
-		                                    <legend></legend>
-		                                    <div class="form-group">
-		                                        <label class="col-md-2 col-sm-2 control-label">Gross Weight</label>
-		                                        <div class="col-md-6 col-sm-6">
-		                                            <input type="text" placeholder="Mobile" class="form-control">
-		                                        </div>
-		                                    </div>
-		                                    <div class="form-group">
-		                                        <label class="col-md-2 col-sm-2 control-label">Destination</label>
-		                                        <div class="col-md-6 col-sm-6">
-		                                            <input type="text" placeholder="Mobile" class="form-control">
-		                                        </div>
-		                                    </div>
-		                                    <div class="form-group">
-		                                        <label class="col-md-2 col-sm-2 control-label">Destination Address</label>
-		                                        <div class="col-md-6 col-sm-6">
-		                                            <input type="text" placeholder="Mobile" class="form-control">
-		                                        </div>
-		                                    </div>
-		                                    <div class="form-group">
-		                                        <label class="col-md-2 col-sm-2 control-label">Courier</label>
-		                                        <div class="col-md-6 col-sm-6">
-		                                            <input type="text" placeholder="Mobile" class="form-control">
-		                                        </div>
-		                                    </div>
-		                                </fieldset>
-		                                <button type="submit" class="finish btn btn-info btn-extend"> Finish!</button>
-		                            </form>
-		                        </div>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
-		</div>
+	<div class="row">
+	    <div class="col-lg-8 col-xs-offset-2">
+	        <section class="panel">
+	            <header class="panel-heading text-center">
+	                Customer Details
+	            </header>
+	            <div class="panel-body">
+	                {!! Form::open(['action'=>'ClientsController@store']) !!}
+	                    <div class="form-group">
+	                        <label>Full Name</label>
+	                        <div class="iconic-input right">
+	                            <i class="fa fa-book"></i>
+	                            <input type="text" name="name" class="form-control" value="{{ old('name') }}" placeholder="Full Name">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label>Nationality</label>
+	                        <div class="iconic-input right">
+	                            <i class="fa fa-book"></i>
+	                            <input type="text" name="nationality" value="{{ old('nationality') }}" class="form-control" placeholder="Nationality">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label>Company Name</label>
+	                        <div class="iconic-input right">
+	                            <i class="fa fa-book"></i>
+	                            <input type="text" name="company_name" value="{{ old('company_name') }}" class="form-control" placeholder="Campany Name">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label>Valid ID Number</label>
+	                        <div class="iconic-input right">
+	                            <i class="fa fa-book"></i>
+	                            <input type="text" name="national_id" value="{{ old('national_id') }}" class="form-control" placeholder="">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label>Email</label>
+	                        <div class="iconic-input right">
+	                            <i class="fa fa-book"></i>
+	                            <input type="text" name="email" value="{{ old('email') }}" class="form-control" placeholder="Email">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label>Phone Number</label>
+	                        <div class="iconic-input right">
+	                            <i class="fa fa-book"></i>
+	                            <input type="text" name="phone_number" value="{{ old('phone_number') }}" class="form-control" placeholder="Phone Number">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label>Occupation</label>
+	                        <div class="iconic-input right">
+	                            <i class="fa fa-book"></i>
+	                            <input type="text" name="occupation" value="{{ old('occupation') }}" class="form-control" placeholder="Occupation">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label>Residential Address</label>
+	                        <div class="iconic-input right">
+	                            <i class="fa fa-book"></i>
+	                            <input type="text" name="address" value="{{ old('address') }}" class="form-control" placeholder="Residential Address">
+	                        </div>
+	                    </div>
+                        <button class="btn btn-success btn-block" type="submit"><i class="fa fa-arrow-circle-o-right"></i> Next</button>
+                        {!! Form::close() !!}
+
+	            </div>
+	        </section>
+	    </div>
+
+	    @include('errors.error-display')
 	
 
 @endsection
 
 @section('scripts')
 
-	<script>
-	    /*=====STEPY WIZARD====*/
-	    $(function() {
-	        $('#default').stepy({
-	            backLabel: 'Previous',
-	            block: true,
-	            nextLabel: 'Next',
-	            titleClick: true,
-	            titleTarget: '.stepy-tab'
-	        });
-	    });
-	    /*=====STEPY WIZARD WITH VALIDATION====*/
-	    $(function() {
-	        $('#stepy_form').stepy({
-	            backLabel: 'Back',
-	            nextLabel: 'Next',
-	            errorImage: true,
-	            block: true,
-	            description: true,
-	            legend: false,
-	            titleClick: true,
-	            titleTarget: '#top_tabby',
-	            validate: true
-	        });
-	        $('#stepy_form').validate({
-	            errorPlacement: function(error, element) {
-	                $('#stepy_form div.stepy-error').append(error);
-	            },
-	            rules: {
-	                'name': 'required',
-	                'email': 'required'
-	            },
-	            messages: {
-	                'name': {
-	                    required: 'Name field is required!'
-	                },
-	                'email': {
-	                    required: 'Email field is requerid!'
-	                }
-	            }
-	        });
-	    });
-	</script>
 
 @endsection

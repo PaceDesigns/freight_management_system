@@ -15,4 +15,13 @@ class Client extends Model {
 		'address',
 	];
 
+	public function products(){
+		return $this->hasMany('App\Product');
+	}
+
+	public function services(){
+		return $this->hasMany('App\CustomerService');
+	}
+
+
 }

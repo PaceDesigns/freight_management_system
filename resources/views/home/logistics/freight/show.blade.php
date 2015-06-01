@@ -1,4 +1,4 @@
-@extends('.........home')
+@extends('home')
 
 @section('styles')
     <link href="{{ asset('css/tables.min.css') }}" rel="stylesheet">
@@ -8,122 +8,312 @@
 @section('content')
 
     <!--body wrapper start-->
+    <div class="wrapper">
 
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel">
+                            <div class="panel-body">
+                                <h4 class="text-center text-muted">FREIGHT INFORMATION</h4>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="panel">
+                            <header class="panel-heading">
+                                CLIENT INFORMATION
+                                <span class="tools pull-right">
+                                    <a href="javascript:;" class="fa fa-chevron-down"></a>
+                                 </span>
+                            </header>
+                            <div class="panel-body">
+                                <ul class="p-info">
+                                    <li>
+                                        <div class="title">NAME</div>
+                                        <div class="desk">Male</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">COMPANY NAME</div>
+                                        <div class="desk">ABC Inc.</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">NATIONALITY</div>
+                                        <div class="desk">BSC. in CSE</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">VALID ID NUMBER</div>
+                                        <div class="desk">50+</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">EMAIL</div>
+                                        <div class="desk">HTML, CSS, JavaScript.</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">OCCUPATION</div>
+                                        <div class="desk">HTML, CSS, JavaScript.</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">RESIDENTIAL ADDRESS</div>
+                                        <div class="desk">HTML, CSS, JavaScript.</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="panel">
+                            <header class="panel-heading">
+                                FREIGHT INFORMATION
+                                <span class="tools pull-right">
+                                    <a href="javascript:;" class="fa fa-chevron-down"></a>
+                                 </span>
+                            </header>
+                            <div class="panel-body">
+                                <ul class="p-info">
+                                    <li>
+                                        <div class="title">CONSIGNEE</div>
+                                        <div class="desk">Male</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">HAWB #</div>
+                                        <div class="desk">ABC Inc.</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">PRODUCT TYPE</div>
+                                        <div class="desk">BSC. in CSE</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">PRODUCT DESCRIPTION</div>
+                                        <div class="desk">50+</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">QUANTITY</div>
+                                        <div class="desk">HTML, CSS, JavaScript.</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">GROSS WEIGHT</div>
+                                        <div class="desk">HTML, CSS, JavaScript.</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">DESTINATION</div>
+                                        <div class="desk">HTML, CSS, JavaScript.</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">DESTINATION </div>
+                                        <div class="desk">HTML, CSS, JavaScript.</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">COURIER</div>
+                                        <div class="desk">HTML, CSS, JavaScript.</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="panel">
+                            <div class="panel-body p-states">
+                                <a href="{{ route('freights') }}" title="">
+                                    <button class="btn btn-warning btn-block" type="button"><i class="fa fa-undo"></i> Go Back</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel">
+                            <div class="panel-body">
+                                <h4 class="text-center text-muted">TRANSPORTATION STATUS</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="panel">
+                            <header class="panel-heading">
+                                STATUS FOR DATE##
+                                <span class="tools pull-right">
+                                    <a href="javascript:;" class="fa fa-chevron-down"></a>
+                                 </span>
+                            </header>
+                            <div class="panel-body">
+                                <ul class="p-info">
+                                    <li>
+                                        <div class="title">STATUS</div>
+                                        <div class="desk">Male</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">CODE</div>
+                                        <div class="desk">ABC Inc.</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">DATE</div>
+                                        <div class="desk">BSC. in CSE</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">TIME</div>
+                                        <div class="desk">50+</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">LOCATION</div>
+                                        <div class="desk">HTML, CSS, JavaScript.</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="panel">
+                            <header class="panel-heading">
+                                STATUS FOR DATE##
+                                <span class="tools pull-right">
+                                    <a href="javascript:;" class="fa fa-chevron-down"></a>
+                                 </span>
+                            </header>
+                            <div class="panel-body">
+                                <ul class="p-info">
+                                    <li>
+                                        <div class="title">STATUS</div>
+                                        <div class="desk">Male</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">CODE</div>
+                                        <div class="desk">ABC Inc.</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">DATE</div>
+                                        <div class="desk">BSC. in CSE</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">TIME</div>
+                                        <div class="desk">50+</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">LOCATION</div>
+                                        <div class="desk">HTML, CSS, JavaScript.</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="panel">
+                            <header class="panel-heading">
+                                STATUS FOR DATE##
+                                <span class="tools pull-right">
+                                    <a href="javascript:;" class="fa fa-chevron-down"></a>
+                                 </span>
+                            </header>
+                            <div class="panel-body">
+                                <ul class="p-info">
+                                    <li>
+                                        <div class="title">STATUS</div>
+                                        <div class="desk">Male</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">CODE</div>
+                                        <div class="desk">ABC Inc.</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">DATE</div>
+                                        <div class="desk">BSC. in CSE</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">TIME</div>
+                                        <div class="desk">50+</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">LOCATION</div>
+                                        <div class="desk">HTML, CSS, JavaScript.</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="panel">
+                            <header class="panel-heading">
+                                STATUS FOR DATE##
+                                <span class="tools pull-right">
+                                    <a href="javascript:;" class="fa fa-chevron-down"></a>
+                                 </span>
+                            </header>
+                            <div class="panel-body">
+                                <ul class="p-info">
+                                    <li>
+                                        <div class="title">STATUS</div>
+                                        <div class="desk">Male</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">CODE</div>
+                                        <div class="desk">ABC Inc.</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">DATE</div>
+                                        <div class="desk">BSC. in CSE</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">TIME</div>
+                                        <div class="desk">50+</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">LOCATION</div>
+                                        <div class="desk">HTML, CSS, JavaScript.</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="panel">
+                            <div class="panel-body p-states">
+                                <form role="form">
+                                    <div class="form-group">
+                                        <label>STATUS</label>
+                                        <div class="iconic-input right">
+                                            <i class="fa fa-flash"></i>
+                                            <input type="text" class="form-control" placeholder="Status">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>CODE</label>
+                                        <div class="iconic-input right">
+                                            <i class="fa fa-barcode"></i>
+                                            <input type="text" class="form-control" placeholder="Code">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>DATE</label>
+                                        <div class="iconic-input right">
+                                            <i class="fa fa-calendar"></i>
+                                            <input type="text" class="form-control" placeholder="Date">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>LOCATION</label>
+                                        <div class="iconic-input right">
+                                            <i class="fa fa-map-marker"></i>
+                                            <input type="text" class="form-control" placeholder="Location">
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary btn-block" type="submit"><i class="fa fa-refresh"></i> Update Status</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-
-                       <div class="panel">
-                           <div class="panel-body invoice">
-                               <div class="row">
-                                   <div class="col-md-4 col-sm-4">
-                                       <h1 class="invoice-title">invoice</h1>
-                                   </div>
-                                   <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4">
-                                       <img class="inv-logo" src="images/invoice-logo.jpg" alt=""/>
-                                       <p>121 King Street, Melbourne <br/>
-                                           Victoria 3000 Australia <br/>
-                                           Phone: +61 3 8376 6284</p>
-                                   </div>
-                               </div>
-                               <div class="invoice-address">
-                                   <div class="row">
-                                       <div class="col-md-5 col-sm-5">
-                                           <h4 class="inv-to">Invoice To</h4>
-                                           <h2 class="corporate-id">Envato</h2>
-                                           <p>
-                                               121 King Street, Melbourne<br>
-                                               Victoria 3000 Australia<br>
-                                               Phone: +61 3 8376 6284,
-                                               Email : info@envato.com
-                                           </p>
-
-                                       </div>
-                                       <div class="col-md-4 col-md-offset-3 col-sm-4 col-sm-offset-3">
-                                           <div class="inv-col"><span>Invoice#</span> 432134-A</div>
-                                           <div class="inv-col"><span>Invoice Date :</span> 22 March 2014</div>
-                                           <h1 class="t-due">TOTAL DUE</h1>
-                                           <h2 class="amnt-value">$ 3120.00</h2>
-                                       </div>
-                                   </div>
-                               </div>
-                           </div>
-                           <table class="table table-bordered table-invoice">
-                               <thead>
-                               <tr>
-                                   <th>#</th>
-                                   <th>Item Description</th>
-                                   <th class="text-center">Unit Cost</th>
-                                   <th class="text-center">Quantity</th>
-                                   <th class="text-center">Total</th>
-                               </tr>
-                               </thead>
-                               <tbody>
-                               <tr>
-                                   <td>1</td>
-                                   <td>
-                                       <h4>Service One</h4>
-                                       <p>Service Four Description Lorem ipsum dolor sit amet.</p>
-                                   </td>
-                                   <td class="text-center"><strong>$ 599.00</strong></td>
-                                   <td class="text-center"><strong>4</strong></td>
-                                   <td class="text-center"><strong>$2396.00</strong></td>
-                               </tr>
-                               <tr>
-                                   <td>2</td>
-                                   <td>
-                                       <h4>Service Two</h4>
-                                       <p>Service Four Description Lorem ipsum dolor sit amet.</p>
-                                   </td>
-                                   <td class="text-center"><strong>$ 599.00</strong>	</td>
-                                   <td class="text-center"><strong>5</strong></td>
-                                   <td class="text-center"><strong>$2995.00</strong></td>
-                               </tr>
-                               <tr>
-                                   <td>3</td>
-                                   <td>
-                                       <h4>Service Three</h4>
-                                       <p>Service Four Description Lorem ipsum dolor sit amet.</p>
-                                   </td>
-                                   <td class="text-center"><strong>$ 599.00</strong>	</td>
-                                   <td class="text-center"><strong>2</strong></td>
-                                   <td class="text-center"><strong>$1198.00</strong></td>
-                               </tr>
-                               <tr>
-                                   <td colspan="2" class="payment-method">
-                                       <h4>Payment Method</h4>
-                                       <p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                       <p>2. Pellentesque tincidunt pulvinar magna quis rhoncus.</p>
-                                       <p>3. Cras rhoncus risus vitae congue commodo.</p>
-                                       <br>
-                                       <h3 class="inv-label">Thank you for your business</h3>
-                                   </td>
-                                   <td class="text-right" colspan="2">
-                                       <p>Sub Total</p>
-                                       <p>Tax (VAT 10%)</p>
-                                       <p>Discount (5%)</p>
-                                       <p><strong>GRAND TOTAL</strong></p>
-                                   </td>
-                                   <td class="text-center">
-                                       <p>$ 6589.00</p>
-                                       <p>$ 120.00</p>
-                                       <p>$ 60.00</p>
-                                       <p><strong>$ 5120.00</strong></p>
-                                   </td>
-                               </tr>
-
-                               </tbody>
-                           </table>
-                       </div>
-                       <div class="text-center ">
-                           <a class="btn btn-success btn-lg"><i class="fa fa-check"></i> Submit Invoice </a>
-                           <a class="btn btn-primary btn-lg" target="_blank" href="invoice_print.html"><i class="fa fa-print"></i> Print </a>
-                       </div>
-
-
-
-   <!--body wrapper end-->
+    </div>
+    <!--body wrapper end-->
 
 @endsection
 
 @section('scripts')
-<script src="{{ asset('js/tables.min.js') }}"></script>
+    <script src="{{ asset('js/tables.min.js') }}"></script>
 @endsection

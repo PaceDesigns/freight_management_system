@@ -19,11 +19,11 @@ class CreateProductsTable extends Migration {
 			$table->string('HAWB');
 			$table->string('product_type');
 			$table->string('product_description');
-			$table->integer('quantity');
+			$table->integer('quantity')->unsigned();
 			$table->integer('gross_weight');
 			$table->string('destination');
 			$table->string('destination_address');
-			$table->string('courier');
+			$table->integer('courier_id');
 			$table->timestamps();
 		});
 	}

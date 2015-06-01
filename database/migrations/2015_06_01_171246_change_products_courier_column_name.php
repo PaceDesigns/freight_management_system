@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateInvoicesTable extends Migration {
+class ChangeProductsCourierColumnName extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,12 +12,7 @@ class CreateInvoicesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('invoices', function(Blueprint $table)
-		{
-			$table->increments('id');
-
-			$table->timestamps();
-		});
+		//
 	}
 
 	/**
@@ -27,7 +22,7 @@ class CreateInvoicesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('invoices');
+		//
 	}
 
 }

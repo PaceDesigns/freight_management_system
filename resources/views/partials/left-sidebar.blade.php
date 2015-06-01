@@ -32,7 +32,7 @@
                  @if(Auth::user()->department_id < 4)
                     <li><a href="{{ url('home') }}"><i class="fa fa-home"></i> <span> Dashboard</span></a></li>
                     <li><a href="{{ url('clients') }}"><i class="fa fa-book"></i> <span> Clients</span></a></li>
-                    <li class=""><a href="{{ url('products') }}"><i class="fa fa-laptop"></i> <span> Freight Processing</span></a></li>
+                    <li class=""><a href="{{ url('freights') }}"><i class="fa fa-laptop"></i> <span> Freight Processing</span></a></li>
                     <li><a href="{{ route('mails') }}"><i class="fa fa-envelope"></i> <span> Mail</span></a>
                     </li>
                     @if(Auth::user()->privilege == 1)

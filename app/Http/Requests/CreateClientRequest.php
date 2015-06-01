@@ -22,14 +22,14 @@ class CreateClientRequest extends Request {
 	public function rules()
 	{
 		return [
-			'name' => 'required',
-			'nationality' => 'required|min:6',
-			'company_name' => 'required',
-			'national_id' => 'required|unique:clients',
-			'email' => 'required|email|max:255|unique:clients',
-			'phone_number' => 'required|min:8',
-			'occupation' => 'required',
-			'address' => 'required|string|max:255',
+			'name' 				=> 'required',
+			'nationality' 		=> 'required|min:3',
+			'company_name' 		=> 'required',
+			'national_id' 		=> 'required|unique:clients',
+			'email' 			=> 'required|email|max:255|unique:clients',
+			'phone_number' 		=> 'required|min:8',
+			'occupation' 		=> 'required',
+			'address' 			=> 'required|string|max:255',
 		];
 	}
 

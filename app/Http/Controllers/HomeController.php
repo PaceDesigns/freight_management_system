@@ -34,4 +34,14 @@ class HomeController extends Controller {
 
 	}
 
+	public function freights()
+	{
+		return view('home.logistics.freight.index');
+	}
+
+	public function freight()
+	{
+		return view('home.logistics.freight.show');
+	}
+
 }

@@ -23,6 +23,7 @@ elixir(function(mix) {
 
 	mix.styles([
 		'style.css',
+		'table-responsive.css',
 		'style-responsive.css',
 		'jquery.stepy.css',
 	], 'public/css/all-styles.min.css', 'resources/assets/css');

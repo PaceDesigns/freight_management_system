@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Http\Requests\CreateClientRequest;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
@@ -43,8 +44,9 @@ class ClientsController extends Controller {
 	 */
 	public function store(CreateClientRequest $request)
 	{
-		Client::create($request->all());
-		return redirect('home.clients');
+		$request = $request->all();
+		Client::create($request);
+		return redirect()->route('add_product');
 	}
 
 	/**
@@ -53,10 +55,10 @@ class ClientsController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show()
 	{
-		$client = Client::find($id);
-		return view('home.clients.show')->with('client', $client);
+		// $client = Client::find($id);
+		return view('home.customers.show')->with('client', $client);
 	}
 
 	/**
@@ -68,7 +70,7 @@ class ClientsController extends Controller {
 	public function edit($id)
 	{
 		$client = Client::find($id);
-		return view('home.clients.edit')->with('client', $client);
+		return view('home.customers.edit')->with('client', $client);
 	}
 
 	/**
@@ -81,7 +83,7 @@ class ClientsController extends Controller {
 	{
 		$client = Client::find($id);
 		$client->update($request->all());
-		return redirect('home.clients');
+		return redirect('home.customers');
 	}
 
 	/**
@@ -94,7 +96,7 @@ class ClientsController extends Controller {
 	{
 		$client = Client::find($id);
 		$client->delete();
-		return redirect('home.clients');
+		return redirect('home.customers');
 	}
 
 }
